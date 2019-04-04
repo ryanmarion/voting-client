@@ -1,9 +1,12 @@
 import jsdom from 'jsdom';
+import chai from 'chai';
+import chaiImmutable from 'chai-immutable';
 
-const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
-const win = doc.defaultView;
+const {JSDOM} = jsdom;
+const {document} = (new JSDOM('<!doctype html><html><body></body></html>',{url:"http://localhost"})).window;
+const win = document.defaultView;
 
-global.document = doc;
+global.document = document;
 global.window = win;
 
 Object.keys(window).forEach((key) => {
