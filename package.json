@@ -28,6 +28,7 @@
     "chai-immutable": "^2.0.0",
     "jsdom": "^14.0.0",
     "mocha": "^6.0.2",
+    "react-addons-test-utils": "^15.6.2",
     "webpack-cli": "^3.3.0"
   },
   "babel": {
@@ -37,13 +38,13 @@
     ]
   },
   "dependencies": {
-    "create-react-class": "^15.2.1",
+    "create-react-class": "^15.6.3",
     "immutable": "^3.0.3",
-    "react": "15.2.1",
+    "react": "^16.8.6",
     "react-addons-pure-render-mixin": "15.6.2",
-    "react-addons-test-utils": "15.2.1",
-    "react-dom": "15.2.1",
-    "react-hot-loader": "^4.8.2",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.3",
+    "react-router-dom": "^5.0.0",
     "webpack": "^4.29.6",
     "webpack-dev-server": "^3.2.1"
   }

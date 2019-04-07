@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Voting from './components/Voting.jsx';
+import {BrowserRouter as Router, Route, hashHistory} from 'react-router-dom';
+import App from './components/App';
+import Voting from './components/Voting';
+import Results from './components/Results';
+import {List} from 'immutable';
 
-const pair = ['Trainspotting', '28 Days Later'];
+//const pair = List.of('Trainspotting', '28 Days Later');
 
 ReactDOM.render(
-  <Voting pair={pair} winner={'Trainspotting'}/>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('app')
 );
