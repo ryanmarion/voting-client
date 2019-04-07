@@ -8,11 +8,11 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'react-hot-loader/webpack!babel-loader'
+      loader: 'babel-loader'
     }]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: [' ', '.js', '.jsx']
   },
   output: {
     path: __dirname + '/dist',
@@ -21,6 +21,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    hot:true
+    hot:true,
+    historyApiFallback: true
   }
 };
