@@ -5,20 +5,18 @@ import App from './components/App';
 import {createStore} from 'redux';
 import reducer from './reducer';
 import {Provider} from 'react-redux';
+import io from 'socket.io-client';
 import {List} from 'immutable';
+import {setState} from './action_creators';
 
 //const pair = List.of('Trainspotting', '28 Days Later');
 
 const store = createStore(reducer);
-store.dispatch({
-  type:'SET_STATE',
-  state:{
-    vote:{
-      pair:['Sunshine','28 Days Later'],
-      tally:{Sunshine:2}
-    }
-  }
-});
+
+const socket = io(`${location.protocol}//${location.hostname}:8090`);
+socket.on('state', state =>
+  store.dispatch(setState(state))
+);
 
 
 ReactDOM.render(
