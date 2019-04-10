@@ -5,9 +5,10 @@ export default class Vote extends React.PureComponent{
     return this.props.pair || [];
   }
   isDisabled() {
-    return !!this.props.hasVoted;
+    return this.props.hasVoted;
   }
-  hasVotedFor(entry) {
+  hasVotedFor(entry){
+    console.log(this.props);
     return this.props.hasVoted === entry;
   }
   render() {
