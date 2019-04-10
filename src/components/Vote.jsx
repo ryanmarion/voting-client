@@ -8,7 +8,7 @@ export default class Vote extends React.PureComponent{
     return !!this.props.hasVoted;
   }
   hasVotedFor(entry){
-    //console.log(this.props);
+    console.log(this,entry);
     return this.props.hasVoted === entry;
   }
   render() {
