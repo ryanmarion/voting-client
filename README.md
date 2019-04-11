@@ -1,1 +1,1 @@
-"#voting-client" 
+#voting-client
