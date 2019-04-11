@@ -10,6 +10,8 @@ import {List} from 'immutable';
 import {setState} from './action_creators';
 import remoteActionMiddleware from './remote_action_middleware';
 
+require('./style.css');
+
 //const pair = List.of('Trainspotting', '28 Days Later');
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
 socket.on('state', state =>
